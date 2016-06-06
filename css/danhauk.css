@@ -1,0 +1,95 @@
+/* ================================
+   _       _       _
+__(.)<  __(.)>  __(.)>
+\___)   \___)   \___) 
+
+==================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #2C343A;
+  color: #B7BFC5;
+  font: 300 1.8em/1.5 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 20px;
+}
+
+body::before {
+  background-image: -webkit-linear-gradient(left, #F732E2, #01E598, #fafe50);
+  background-image: -moz-linear-gradient(left, #F732E2, #01E598, #fafe50);
+  background-image: -o-linear-gradient(left, #F732E2, #01E598, #fafe50);
+  background-image: linear-gradient(to right, #F732E2, #01E598, #fafe50);
+  content: '';
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.gravatar {
+  border: 5px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: block;
+  margin: 1.5em auto .5em;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+h2 {
+  font-size: .9em;
+  font-weight: 300;
+  text-align: center;
+}
+
+p {
+  margin: 1.7em auto;
+  max-width: 960px;
+}
+
+a {
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #BB5ED0;
+  content: '';
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+a:hover::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+@media all and (max-width: 640px) {
+  body {
+    font-size: 1.4em;
+  }
+}
