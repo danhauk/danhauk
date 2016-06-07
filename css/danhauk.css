@@ -20,8 +20,6 @@ body {
 }
 
 body::before {
-  -webkit-animation-name: 0.4s loader;
-               animation: 0.4s loader;
   background-image: -webkit-linear-gradient(left, #F732E2, #01E598, #fafe50);
   background-image: -moz-linear-gradient(left, #F732E2, #01E598, #fafe50);
   background-image: -o-linear-gradient(left, #F732E2, #01E598, #fafe50);
@@ -94,15 +92,5 @@ a:hover::after {
 @media all and (max-width: 640px) {
   body {
     font-size: 1.4em;
-  }
-}
-
-@keyframes loader {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
   }
 }
