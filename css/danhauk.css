@@ -1,7 +1,7 @@
 /* ================================
    _       _       _
 __(.)<  __(.)>  __(.)>
-\___)   \___)   \___) 
+\___)   \___)   \___)
 
 ==================================== */
 
@@ -53,7 +53,8 @@ h2 {
   text-align: center;
 }
 
-p {
+p,
+.social {
   margin: 1.7em auto;
   max-width: 960px;
 }
@@ -89,8 +90,73 @@ a:hover::after {
   transform: translateY(0px);
 }
 
+.social {
+  text-align: center;
+}
+
+.icon {
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 0;
+  height: 48px;
+  margin: 10px;
+  position: relative;
+  width: 48px;
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.icon::after {
+  height: 100%;
+  box-sizing: content-box;
+  top: -7px;
+  left: -7px;
+  padding: 7px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -webkit-transform: scale(.8);
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(.8);
+  opacity: 0;
+}
+
+.icon svg {
+  fill: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  transition: fill 0.2s;
+}
+
+.icon:hover {
+  background: #fff;
+  color: #2c343a;
+}
+
+.icon:hover svg {
+  fill: #2c343a;
+}
+
+/* Tweaks for visual sizing consistency */
+.icon-wordpress svg {
+  padding: 8px;
+}
+
+.icon-github svg {
+  padding: 9px;
+}
+
 @media all and (max-width: 640px) {
   body {
     font-size: 1.4em;
+  }
+
+  .icon {
+    margin: 10px 5px;
   }
 }
